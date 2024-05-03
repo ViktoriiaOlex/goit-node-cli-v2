@@ -5,8 +5,6 @@ import {
   addContact,
 } from "./contacts/contacts.js";
 
-// Contacts.listContacts().then(console.log).catch(console.error);
-
 import { program } from "commander";
 program
   .option("-a, --action <type>", "choose action")
