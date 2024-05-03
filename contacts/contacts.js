@@ -34,7 +34,7 @@ async function getContactById(contactId) {
 async function addContact(name, email, phone) {
   const contacts = await listContacts();
 
-  const newContact = { ...name, email, phone, id: crypto.randomUUID() };
+  const newContact = { ...{ name, email, phone }, id: crypto.randomUUID() };
 
   contacts.push(newContact);
 
