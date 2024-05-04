@@ -3,7 +3,7 @@ import {
   getContactById,
   removeContact,
   addContact,
-} from "./contacts/contacts.js";
+} from "./contacts.js";
 
 import { program } from "commander";
 program

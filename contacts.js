@@ -2,7 +2,7 @@ import * as fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
 
-const contactsPath = path.resolve("contacts", "contacts.json");
+const contactsPath = path.resolve("db", "contacts.json");
 
 async function listContacts() {
   const data = await fs.readFile(contactsPath, { encoding: "utf-8" });
@@ -57,7 +57,7 @@ async function removeContact(contactId) {
     ...contacts.slice(index + 1),
   ];
 
-  await writeContacts(contacts);
+  await writeContacts(newContacts);
   return removedContact;
 }
 export { listContacts, getContactById, removeContact, addContact };
